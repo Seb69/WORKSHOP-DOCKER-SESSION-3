@@ -1,6 +1,7 @@
 # WORKSHOP-DOCKER-SESSION-3
 
-Get started: 
+## Get started: 
+
 Install docker-machine from **linux**:
 ````bash 
 curl -L https://github.com/docker/machine/releases/download/v0.12.2/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine &&
