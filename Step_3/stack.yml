@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+
+  serviceA:
+      image: alpine:latest
+      deploy:
+          replicas: 1
+
+  serviceB:
+      image: alpine:latest
+      deploy:
+          replicas: 1   
+  
