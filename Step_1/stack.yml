@@ -3,7 +3,7 @@ version: '3.3'
 services:
 
   incrementloop:
-      image: encrement:1
+      image: increment:1
       deploy:
           replicas: 3
 
