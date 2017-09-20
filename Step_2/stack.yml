@@ -3,12 +3,12 @@ version: '3.3'
 services:
 
   incrementloop:
-      image: increment:1
+      image: 1342/increment:1
       deploy:
           replicas: 3
 
   decrementloop:
-      image: decrement:1
+      image: 1342/decrement:1
       deploy:
           replicas: 3   
   
