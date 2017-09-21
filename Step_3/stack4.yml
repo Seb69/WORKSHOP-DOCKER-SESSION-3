@@ -7,13 +7,13 @@ services:
       command: /bin/sh
       tty: true # -t
       stdin_open: true  # -i
-      
+
       deploy:
           replicas: 1
-      # Expose container port 
-      ports:
-         - "8080"
 
-      # Expose host and container port <HOST>:<CONTAINER            
+      #Publish a port in swarm mode 
       ports:
-         - "8080:8080" 
+       - target: 8080
+         published: 8080
+         protocol: tcp
+         mode: ingress
