@@ -10,10 +10,7 @@ services:
       
       deploy:
           replicas: 1
-      # Expose container port 
-      ports:
-         - "8080"
-
+    
       # Expose host and container port <HOST>:<CONTAINER            
       ports:
          - "8080:8080" 
