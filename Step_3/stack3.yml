@@ -6,6 +6,17 @@ services:
       image: alpine:latest
       deploy:
           replicas: 1
-      ports:
-          - "8080:8080" 
+      # # Expose container port 
+      # ports:
+      #    - "8080"
 
+      # # Expose host and container port <HOST>:<CONTAINER            
+      # ports:
+      #    - "8080:8080" 
+
+      #Publish a port in swarm mode 
+      ports:
+       - target: 8080
+         published: 8080
+         protocol: tcp
+         mode: ingress
