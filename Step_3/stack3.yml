@@ -1,0 +1,44 @@
+version: '3.3'
+
+services:
+
+  serviceA:
+      image: alpine:latest
+      command: /bin/sh
+      tty: true # -t
+      stdin_open: true  # -i
+
+      deploy:
+          replicas: 1
+
+      networks:
+          - backend
+
+  serviceB:
+      image: alpine:latest
+      command: /bin/sh
+      tty: true
+      stdin_open: true
+      
+      deploy:
+          replicas: 1   
+      networks:
+        - backend
+        - frontend
+ serviceC:
+    image: alpine:latest
+    command: /bin/sh
+    tty: true
+    stdin_open: true
+    
+    deploy:
+        replicas: 1   
+    networks:
+        - frontend   
+
+networks:
+  frontend:
+    driver: overlay
+  backend:
+    driver: overlay 
+
