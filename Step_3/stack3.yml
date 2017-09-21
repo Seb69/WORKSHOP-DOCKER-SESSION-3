@@ -4,6 +4,10 @@ services:
 
   serviceA:
       image: alpine:latest
+      command: /bin/sh
+      tty: true # -t
+      stdin_open: true  # -i
+      
       deploy:
           replicas: 1
       # # Expose container port 
