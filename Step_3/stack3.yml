@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+
+  serviceA:
+      image: alpine:latest
+      deploy:
+          replicas: 1
+      ports:
+          - "8080:8080" 
+
