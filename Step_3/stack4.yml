@@ -3,10 +3,7 @@ version: '3.3'
 services:
 
   serviceA:
-      image: alpine:latest
-      command: /bin/sh
-      tty: true # -t
-      stdin_open: true  # -i
+      image: nginx:latest
 
       deploy:
           replicas: 1
@@ -14,6 +11,6 @@ services:
       #Publish a port in swarm mode 
       ports:
        - target: 8080
-         published: 8080
+         published: 80
          protocol: tcp
-         mode: bridge
+         mode: host
