@@ -14,13 +14,6 @@ services:
       # ports:
       #    - "8080"
 
-      # # Expose host and container port <HOST>:<CONTAINER            
-      # ports:
-      #    - "8080:8080" 
-
-      #Publish a port in swarm mode 
+      # Expose host and container port <HOST>:<CONTAINER            
       ports:
-       - target: 8080
-         published: 8080
-         protocol: tcp
-         mode: ingress
+         - "8080:8080" 
